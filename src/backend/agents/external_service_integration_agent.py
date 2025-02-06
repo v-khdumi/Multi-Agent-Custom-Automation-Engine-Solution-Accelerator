@@ -47,7 +47,7 @@ class ExternalServiceIntegrationAgent:
         """
         logger.info("Sending confirmation notifications...")
         time.sleep(0.5)  # Brief delay for notification
-        # For demo, we log confirmation and return a success message.
+        # For demo purposes, log confirmation and return a success message.
         notification_message = f"{len(updated_data)} records synchronized successfully."
         logger.info(f"Notification: {notification_message}")
         return notification_message
@@ -62,7 +62,7 @@ class ExternalServiceIntegrationAgent:
         # Step 1: Initiation - a user request triggers the sync.
         erp_data = self.fetch_erp_data()
 
-        # Step 2: Processing - let the agent post the ERP data to the automation engine.
+        # Step 2: Processing - the agent posts the ERP data to the automation engine.
         updated_data = self.post_data_to_automation(erp_data)
 
         # Simulate data consistency check.
